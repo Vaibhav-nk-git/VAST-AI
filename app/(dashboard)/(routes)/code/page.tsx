@@ -133,7 +133,7 @@ export default function CodePage() {
                                     }} 
                                     className="text-sm overflow-hidden leading-7"
                                 >
-                                    {message.content || ""}
+                                    {typeof message.content === 'string' ? message.content : JSON.stringify(message.content) || ""}
                                 </ReactMarkdown>
                             </div>
                         ))}

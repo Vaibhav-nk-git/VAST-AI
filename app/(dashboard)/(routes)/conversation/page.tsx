@@ -124,7 +124,7 @@ export default function ConversationPage() {
                             )} >
                                 {message.role === 'user' ? <UserAvatar/>: <BotAvatar/>}
                                 <p className='text-sm'>
-                                    {message.content}
+                                {typeof message.content === 'string' ? message.content : JSON.stringify(message.content) || ""}
                                 </p>
                             </div>
                         ))}
